@@ -161,6 +161,7 @@ const ShopScreen  = () => {
                   label={'Confirm choice'}
                   style={{marginBottom: ButtonSpace}}
                   onPress={onFeaturesSelect}
+                  disabled={isLoading}
                   >
                     {isLoading && <ActivityIndicator size={"small"} color={"white"}/>}
                   </Button>

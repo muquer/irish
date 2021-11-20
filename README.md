@@ -23,7 +23,7 @@ Made with:
 
 Installation:
 
-1. clone `https://github.com/muquer/iris-flower-shop.git`
+1. clone `https://github.com/muquer/irish.git`
 
 2. run `npm install`
 

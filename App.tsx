@@ -16,7 +16,7 @@ export default function App() {
   const [contactList, setContactList] = useState<ContactInfo[]>([])
   const getContactData = () => timeoutPromise(5000,fetch(`${API.API_URL}/contacts`, {method: 'GET'}))
   const storeContactData = (data: ContactInfo) => timeoutPromise(5000,fetch(`${API.API_URL}/contacts`, {method: 'POST',    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }))
-  const getIrisClass = (data : IrisVariety) => timeoutPromise(5000,fetch(`${API.API_URL}/classify-iris`, {method: 'POST',    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }))
+  const getIrisClass = (data : IrisVariety) => timeoutPromise(20000,fetch(`${API.API_URL}/classify-iris`, {method: 'POST',    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }))
   const submitIrisOrder = (data :OrderType) => timeoutPromise(5000,fetch(`${API.API_URL}/order`, {method: 'POST',    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }))
 
   if (!isLoadingComplete) {
